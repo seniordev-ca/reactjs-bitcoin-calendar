@@ -1,0 +1,149 @@
+.custom-switch {
+  display: block !important;
+  background: $separator-color !important;
+  width: 58px !important;
+  height: 27px !important;
+  border: 1px solid $separator-color !important;
+
+  &:after {
+    width: 18px !important;
+    height: 18px !important;
+    top: 3px !important;
+    margin-left: 3px !important;
+    box-shadow: initial;
+    transform: initial !important;
+    animation-name: unset !important;
+    background: $foreground-color !important;
+  }
+  &.rc-switch:after {
+    box-shadow: none !important;
+  }
+
+  &.rc-switch-checked:after {
+    left: 30px !important;
+    box-shadow: none !important;
+  }
+
+  &.rc-switch-checked.custom-switch-primary {
+    background: #fff !important;
+    border: #fff !important;
+  }
+
+  &.rc-switch-checked.custom-switch-secondary {
+    background: $theme-color-2 !important;
+    border: 1px solid $theme-color-2 !important;
+  }
+
+  &.custom-switch-primary-inverse {
+    border: 1px solid $separator-color !important;
+  }
+
+  &.rc-switch-checked.custom-switch-primary-inverse {
+    background: $input-background !important;
+    border: 1px solid $theme-color-1 !important;
+
+    &:after {
+      background: $theme-color-1 !important;
+    }
+  }
+
+  &.custom-switch-secondary-inverse {
+    border: 1px solid $separator-color !important;
+  }
+
+  &.rc-switch-checked.custom-switch-secondary-inverse {
+    background: $input-background !important;
+    border: 1px solid $theme-color-2 !important;
+
+    &:after {
+      background: $theme-color-2 !important;
+    }
+  }
+}
+
+.rc-switch:focus {
+  box-shadow: initial !important;
+}
+
+.custom-switch .custom-switch-input + .custom-switch-btn {
+  background: $separator-color !important;
+}
+
+.custom-switch.custom-switch-primary
+  .custom-switch-input:checked
+  + .custom-switch-btn {
+  background: $theme-color-1 !important;
+  border: 1px solid $theme-color-1 !important;
+}
+
+.custom-switch.custom-switch-secondary
+  .custom-switch-input:checked
+  + .custom-switch-btn {
+  background: $theme-color-2 !important;
+  border: 1px solid $theme-color-2 !important;
+}
+
+.custom-switch.custom-switch-primary-inverse
+  .custom-switch-input
+  + .custom-switch-btn {
+  border: 1px solid $separator-color !important;
+}
+
+.custom-switch.custom-switch-primary-inverse
+  .custom-switch-input:checked
+  + .custom-switch-btn {
+  background: $input-background !important;
+  border: 1px solid $theme-color-1 !important;
+}
+
+.custom-switch.custom-switch-primary-inverse
+  .custom-switch-input:checked
+  + .custom-switch-btn:after {
+  background: $theme-color-1 !important;
+}
+
+.custom-switch.custom-switch-secondary-inverse
+  .custom-switch-input
+  + .custom-switch-btn {
+  border: 1px solid $separator-color !important;
+}
+
+.custom-switch.custom-switch-secondary-inverse
+  .custom-switch-input:checked
+  + .custom-switch-btn {
+  background: $input-background !important;
+  border: 1px solid $theme-color-2 !important;
+}
+
+.custom-switch.custom-switch-secondary-inverse
+  .custom-switch-input:checked
+  + .custom-switch-btn:after {
+  background: $theme-color-2 !important;
+}
+
+.custom-switch .custom-switch-input + .custom-switch-btn:after {
+  background: $input-background !important;
+}
+
+.custom-switch .custom-switch-input + .custom-switch-btn {
+  border-color: $separator-color !important;
+}
+
+.rc-switch.custom-switch.custom-switch-small {
+  width: 48px !important;
+  height: 26px !important;
+  background: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.rc-switch.custom-switch.custom-switch-small:after {
+  background: var(--theme-color-1) !important;
+  width: 22px !important;
+  height: 22px !important;
+  left: 0px !important;
+  top: 1px !important;
+}
+
+.rc-switch-checked.custom-switch.custom-switch-small:after {
+  left: 19px !important;
+}

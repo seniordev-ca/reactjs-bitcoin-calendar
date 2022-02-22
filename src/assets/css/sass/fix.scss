@@ -1,0 +1,21 @@
+// CalendarToolbar.js
+@import '_01_mixins.scss';
+
+.calendar-dropdown-mobile {
+  position: relative;
+  @include respond-below(xs) {
+    margin-left: 0;
+    transform: translate(-20%,30%);
+    z-index: 5;
+  }
+}
+// EventComponent.js
+div.rbc-cus-event-cell .event-content-wrapper .rbc-date-cell {
+  @include respond-below(md) {
+    margin-bottom: 0;
+  }
+}
+@import 'fix-event-dot-translate.scss';
+.event-dot-translate {
+  margin-left: -5px;
+}

@@ -1,0 +1,73 @@
+main {
+  //margin-left: $sub-menu-width + $main-menu-width + $main-margin;
+  //margin-right: $main-margin;
+  //margin-bottom: $main-margin;
+  transition: margin-left $menu-collapse-time;
+  //padding-left: $body-x-padding;
+  //padding-right: $body-x-padding;
+  background: var(--main-bg-color);
+  max-width: $body-width;
+  margin: auto;
+
+  &.sub-hidden {
+    margin-left: $main-menu-width + $main-margin;
+  }
+
+  &.main-hidden {
+    margin-left: $main-margin;
+  }
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include respond-below(xl) {
+
+  }
+
+  @include respond-below(lg) {
+
+    min-width: 1200px;
+  }
+
+  @include respond-below(sm) {
+    margin-left: $main-margin-xs !important;
+    margin-right: $main-margin-xs !important;
+    //margin-top: $main-margin-xs + $navbar-height-xs !important;
+    margin-bottom: 0;
+    margin-top: 0;
+    min-width: auto;
+  }
+
+  @include respond-below(xs) {
+    margin-bottom: 0;
+  }
+}
+
+.rtl {
+  main {
+    margin-right: $sub-menu-width + $main-menu-width + $main-margin;
+    margin-left: $main-margin !important;
+    transition: margin-right $menu-collapse-time;
+
+    @include respond-below(xl) {
+      margin-right: $sub-menu-width-lg + $main-menu-width-lg + $main-margin-lg;
+      margin-left: $main-margin-lg !important;
+    }
+
+    @include respond-below(lg) {
+      margin-right: $sub-menu-width-md + $main-menu-width-md + $main-margin-md;
+      margin-left: $main-margin-md !important;
+    }
+
+    @include respond-below(sm) {
+      margin-right: $main-margin-xs !important;
+      margin-left: $main-margin-xs !important;
+    }
+
+    @include respond-below(xs) {
+      margin-bottom: 0;
+    }
+  }
+}
